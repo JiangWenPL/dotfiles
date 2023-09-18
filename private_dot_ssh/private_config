@@ -1,0 +1,41 @@
+Host neowise
+    HostName neowise.seas.upenn.edu
+    User wen
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes 
+
+Host chiron
+    HostName chiron.seas.upenn.edu
+    User wen
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes 
+
+Host github.com
+    HostName github.com
+    User git
+    #ProxyCommand nc -X 5 -x 127.0.0.1:1086 %h %p
+    IdentityFile ~/.ssh/new_git
+    IdentitiesOnly yes
+
+Host neo-jump
+    HostName neowise.seas.upenn.edu
+    User wen
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes 
+    ForwardAgent Yes
+
+Host neo
+    HostName neowise.seas.upenn.edu
+    User wen
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes 
+
+Host *.grasp.maas
+    ProxyJump neo-jump
+    ForwardAgent Yes
+
+Host tk
+    HostName 158.130.50.2
+    User wen
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes 
