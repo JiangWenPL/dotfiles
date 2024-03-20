@@ -39,3 +39,17 @@ Host tk
     User wen
     IdentityFile ~/.ssh/id_rsa
     IdentitiesOnly yes 
+
+Host aws
+    #HostName ec2-44-213-76-83.compute-1.amazonaws.com
+    #HostName ec2-44-201-95-101.compute-1.amazonaws.com
+    HostName ec2-3-239-120-114.compute-1.amazonaws.com
+    User ubuntu
+    IdentityFile ~/.ssh/wen_aws.pem
+    IdentitiesOnly yes 
+
+Host v100
+    HostName 158.130.52.26
+    User wen
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes 
