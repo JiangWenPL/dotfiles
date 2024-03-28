@@ -40,6 +40,12 @@ Host tk
     IdentityFile ~/.ssh/id_rsa
     IdentitiesOnly yes 
 
+Host le
+    HostName 158.130.50.21
+    User wen
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes 
+
 Host aws
     #HostName ec2-44-213-76-83.compute-1.amazonaws.com
     #HostName ec2-44-201-95-101.compute-1.amazonaws.com
@@ -49,7 +55,26 @@ Host aws
     IdentitiesOnly yes 
 
 Host v100
-    HostName 158.130.52.26
+    HostName 158.130.50.5
     User wen
     IdentityFile ~/.ssh/id_rsa
     IdentitiesOnly yes 
+
+Host claude
+    HostName 158.130.50.50
+    User wen
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes 
+
+Host hal 
+    HostName halley.seas.upenn.edu
+    User wen
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes 
+
+Host hp
+    HostName 192.168.1.171
+    User WenJi
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes 
+
