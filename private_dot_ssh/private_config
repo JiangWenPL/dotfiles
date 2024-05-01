@@ -24,6 +24,13 @@ Host neo-jump
     IdentitiesOnly yes 
     ForwardAgent Yes
 
+Host hal-jump 
+    HostName halley.seas.upenn.edu
+    User wen
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes 
+    ForwardAgent Yes
+
 Host neo
     HostName neowise.seas.upenn.edu
     User wen
@@ -31,7 +38,14 @@ Host neo
     IdentitiesOnly yes 
 
 Host *.grasp.maas
+    User wen
     ProxyJump neo-jump
+    ForwardAgent Yes
+
+Host a40 
+    HostName kd-a40-0.grasp.maas
+    User wen
+    ProxyJump hal-jump
     ForwardAgent Yes
 
 Host tk
